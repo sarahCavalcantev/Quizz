@@ -1,4 +1,5 @@
 # Quiz
+https://sarahcavalcantev.github.io/Quizz/
 Quiz Interativo de Reação
 
 Um quiz de múltipla escolha com tempo limitado para responder cada pergunta. Se o tempo acabar, a pergunta é pulada automaticamente. No final, o sistema mostra quantas perguntas você acertou e o tempo médio de resposta.
