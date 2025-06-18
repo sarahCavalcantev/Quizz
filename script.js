@@ -33,20 +33,19 @@ let tempos = []; // lista para guardar quanto tempo ele levou em cada pergunta
 let tempoRestante = 5; //começa com 5 segundos
 let intervalo; // controle do cronômetro
 let tempoInicio; //momento em que a pergunta foi exibida
+
 function tocarAPartirDos6Segundos() {
   const musica = document.getElementById("musicaQuiz");
 
   // Garante que o currentTime só seja definido após o carregamento dos metadados
   musica.addEventListener("loadedmetadata", () => {
-    musica.currentTime = 5; // Vai direto pro segundo 6
+    musica.currentTime = 4; // Vai direto pro segundo 6
     musica.play();          // Toca a partir daí
   }, { once: true });
 
   // Força o carregamento dos metadados
   musica.load();
 }
-
-
 function iniciarQuiz() {
   
   nome = document.getElementById("nomeUsuario").value.trim();
