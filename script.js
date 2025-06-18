@@ -38,10 +38,10 @@ function tocarAPartirDos6Segundos() {
   const musica = document.getElementById("musicaQuiz");
 
   // Garante que o currentTime só seja definido após o carregamento dos metadados
-   const musica = document.getElementById('musicaQuiz');
-  musica.currentTime = 6;
-  musica.play().catch(e => console.log('Erro ao tocar música:', e));
-}
+  musica.addEventListener("loadedmetadata", () => {
+    musica.currentTime = 5; // Vai direto pro segundo 6
+    musica.play();          // Toca a partir daí
+  }, { once: true });
 
   // Força o carregamento dos metadados
   musica.load();
