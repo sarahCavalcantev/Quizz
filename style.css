@@ -25,6 +25,7 @@ body {
   background: rgb(55, 41, 152);
   padding: 50px;
   max-width: 500px;
+  width: 90%
   margin: auto;
   border-radius: 10px;
   box-shadow: 0 0 20px #c996f0;
