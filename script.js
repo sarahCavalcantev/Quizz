@@ -46,6 +46,7 @@ function tocarAPartirDos6Segundos() {
   // Força o carregamento dos metadados
   musica.load();
 }
+
 function iniciarQuiz() {
   
   nome = document.getElementById("nomeUsuario").value.trim();
@@ -53,7 +54,6 @@ function iniciarQuiz() {
     alert("Por favor, digite seu nome!");
     return;
   }
-  
   tocarAPartirDos6Segundos();
   document.getElementById("inicio").style.display = "none"; // esconde a tela de inicio
   document.getElementById("quiz").style.display = "block"; // mostra quiz
