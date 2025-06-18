@@ -33,13 +33,28 @@ let tempos = []; // lista para guardar quanto tempo ele levou em cada pergunta
 let tempoRestante = 5; //começa com 5 segundos
 let intervalo; // controle do cronômetro
 let tempoInicio; //momento em que a pergunta foi exibida
+function tocarAPartirDos6Segundos() {
+  const musica = document.getElementById("musicaQuiz");
+
+  // Garante que o currentTime só seja definido após o carregamento dos metadados
+  musica.addEventListener("loadedmetadata", () => {
+    musica.currentTime = 5; // Vai direto pro segundo 6
+    musica.play();          // Toca a partir daí
+  }, { once: true });
+
+  // Força o carregamento dos metadados
+  musica.load();
+}
+
 
 function iniciarQuiz() {
+  
   nome = document.getElementById("nomeUsuario").value.trim();
   if (!nome) {
     alert("Por favor, digite seu nome!");
     return;
   }
+  tocarAPartirDos6Segundos();
   document.getElementById("inicio").style.display = "none"; // esconde a tela de inicio
   document.getElementById("quiz").style.display = "block"; // mostra quiz
   document.getElementById("saudacao").textContent = `Boa sorte, ${nome}!`;
