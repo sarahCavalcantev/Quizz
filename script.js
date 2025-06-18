@@ -33,6 +33,8 @@ let tempos = []; // lista para guardar quanto tempo ele levou em cada pergunta
 let tempoRestante = 5; //começa com 5 segundos
 let intervalo; // controle do cronômetro
 let tempoInicio; //momento em que a pergunta foi exibida
+
+
 function tocarAPartirDos6Segundos() {
   const musica = document.getElementById("musicaQuiz");
 
@@ -45,7 +47,6 @@ function tocarAPartirDos6Segundos() {
   // Força o carregamento dos metadados
   musica.load();
 }
-
 
 function iniciarQuiz() {
   
