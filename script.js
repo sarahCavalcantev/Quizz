@@ -38,10 +38,10 @@ function tocarAPartirDos6Segundos() {
   const musica = document.getElementById("musicaQuiz");
 
   // Garante que o currentTime só seja definido após o carregamento dos metadados
-  musica.addEventListener("loadedmetadata", () => {
-    musica.currentTime = 4; // Vai direto pro segundo 6
-    musica.play();          // Toca a partir daí
-  }, { once: true });
+   const musica = document.getElementById('musicaQuiz');
+  musica.currentTime = 6;
+  musica.play().catch(e => console.log('Erro ao tocar música:', e));
+}
 
   // Força o carregamento dos metadados
   musica.load();
@@ -53,6 +53,7 @@ function iniciarQuiz() {
     alert("Por favor, digite seu nome!");
     return;
   }
+  
   tocarAPartirDos6Segundos();
   document.getElementById("inicio").style.display = "none"; // esconde a tela de inicio
   document.getElementById("quiz").style.display = "block"; // mostra quiz
