@@ -14,7 +14,7 @@ body {
 
 #container {
   background: rgb(55, 41, 152);
-  padding: 300px 30px;
+  padding: 150px 30px;
   width: 90%;
   max-width: 900px;
   margin: auto;
@@ -69,24 +69,5 @@ button:hover {
   font-size: 16px;
 }
 
-/* Responsivo para celulares */
-@media (max-width: 600px) {
-  #container {
-    padding: 30px 15px;
-    border-radius: 10px;
-  }
 
-  button {
-    font-size: 16px;
-    padding: 12px 20px;
-  }
 
-  #nomeUsuario {
-    font-size: 14px;
-    padding: 10px 16px;
-  }
-
-  #alternativas button {
-    font-size: 15px;
-  }
-}
